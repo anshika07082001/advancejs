@@ -57,3 +57,27 @@ var text = "<table><tr><td><b>ID</b></td><td><b>Name</b></td><td><b>TotalSalary<
 text += "<tr><td>"+myObj.ID+"</td><td>"+myObj.Name+"</td><td>"+myObj.TotalSalary+"</td></tr>"; 
 text += "</table>";
 document.getElementById('divTask3').innerHTML = text;
+
+// //////////////////    Task4 ////////////////////
+
+class details1{
+    constructor(ID,Name,TotalSalary){
+        this.ID=ID;
+        this.Name=Name;
+        this.TotalSalary=TotalSalary;
+    }
+    jsonAccept(jsonobj){
+        const obj = JSON.parse(jsonobj);
+        this.ID = obj.ID;
+        this.Name = obj.Name;
+        this.TotalSalary = obj.TotalSalary;
+    }
+}
+let objDetails = new details1(1,"Harry",12000);
+jObj = '{"ID":"3","Name":"Smith","TotalSalary":"30424"}';
+objDetails.jsonAccept(jObj);
+
+var text = "<table><tr><td><b>ID</b></td><td><b>Name</b></td><td><b>TotalSalary</b></td></tr>";
+text += "<tr><td>"+objDetails.ID+"</td><td>"+objDetails.Name+"</td><td>"+objDetails.TotalSalary+"</td></tr>"; 
+text += "</table>";
+document.getElementById('divTask4').innerHTML = text;
