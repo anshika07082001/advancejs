@@ -47,3 +47,13 @@ var text = "<table><tr><td><b>ID</b></td><td><b>Name</b></td><td><b>TotalSalary<
 text += "<tr><td>"+myEntries.ID+"</td><td>"+myEntries.Name+"</td><td>"+myEntries.TotalSalary+"</td></tr>"; 
 text += "</table>";
 document.getElementById('divTask2').innerHTML=text;
+
+// ////////////   task3   ////////////
+
+myJSON = '{"ID":"1","Name":"John","TotalSalary":"34000"}';
+const myObj = JSON.parse(myJSON);
+
+var text = "<table><tr><td><b>ID</b></td><td><b>Name</b></td><td><b>TotalSalary</b></td></tr>";
+text += "<tr><td>"+myObj.ID+"</td><td>"+myObj.Name+"</td><td>"+myObj.TotalSalary+"</td></tr>"; 
+text += "</table>";
+document.getElementById('divTask3').innerHTML = text;
