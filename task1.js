@@ -33,3 +33,17 @@ for(i=0;i<arrEntry.length;i++){
 }
 document.getElementById('newTable').innerHTML=text;
 }
+// //////////////////  task2    /////////////
+
+class newEntry{
+    constructor(ID,Name,TotalSalary){
+        this.ID=ID;
+        this.Name=Name;
+        this.TotalSalary=TotalSalary;
+    }
+}
+let myEntries = new newEntry(123,"Anshika",34000);
+var text = "<table><tr><td><b>ID</b></td><td><b>Name</b></td><td><b>TotalSalary</b></td></tr>";
+text += "<tr><td>"+myEntries.ID+"</td><td>"+myEntries.Name+"</td><td>"+myEntries.TotalSalary+"</td></tr>"; 
+text += "</table>";
+document.getElementById('divTask2').innerHTML=text;
