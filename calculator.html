@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="divCalculator">
+        <div id="disInput">
+            <button id="clearBtn" onclick="evaluates()">C</button>
+            <input id="inputDis" type="text">
+        </div>
+        <div id="divNum">
+            <div class="d1">
+                <button id="7" onclick="numberS(this)" class="b1">7</button>
+                <button id="8" onclick="numberS(this)" class="b1">8</button>
+                <button id="9" onclick="numberS(this)" class="b1">9</button>
+                <button id="divide" onclick="operators('/')" class="b1">/</button>
+            </div>
+            <div class="d1">
+                <button id="4" onclick="numberS(this)" class="b1">4</button>
+                <button id="5" onclick="numberS(this)" class="b1">5</button>
+                <button id="6" onclick="numberS(this)" class="b1">6</button>
+                <button id="multiply" onclick="operators('*')" class="b1">*</button>
+            </div>
+            <div class="d1">
+                <button id="1" onclick="numberS(this)" class="b1">1</button>
+                <button id="2" onclick="numberS(this)" class="b1">2</button>
+                <button id="3" onclick="numberS(this)" class="b1">3</button>
+                <button id="subtract" onclick="operators('-')" class="b1">-</button>
+            </div>
+            <div class="d1">
+                <button id="0" onclick="numberS(this)" class="b1">0</button>
+                <button id="decimal" onclick="dot()" class="b1">.</button>
+                <button  onclick="calculation()" class="b1">=</button>
+                <button id="addition" onclick="operators('+')" class="b1">+</button>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
