@@ -1,6 +1,7 @@
 const arrEntry =[];
 function addEntry()
 {
+    document.getElementById('error').innerHTML="";
     var idInput = document.getElementById('idInput').value;
     var nameInput = document.getElementById('nameInput').value;
     var salInput = document.getElementById('salInput').value;
@@ -30,6 +31,7 @@ function addEntry()
     {
         document.getElementById('error').innerHTML = e;
     }
+
 }
 populate();
 function populate()
