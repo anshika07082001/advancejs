@@ -1,31 +1,26 @@
 "use strict";
-const arrEntry =[];
-function addEntry()
-{
-    var idInput = document.getElementById('idInput').value;
-    var nameInput = document.getElementById('nameInput').value;
-    var salInput = document.getElementById('salInput').value;
-    arrEntry.push({ID:idInput,Name:nameInput,TotalSalary:salInput});
-    var text = "<table><tr><td>ID</td><td>Name</td><td>Salary</td></tr>"
-    for(var i=0;i<arrEntry.length;i++)
+const details = [{ID:2,Name:"Raj",TotalSalary:4000},
+{ID:3,Name:"harry",TotalSalary:8000},
+{ID:4,Name:"john",TotalSalary:200}];
+
+var text = "<table><tr><td>ID</td><td>Name</td><td>Salary</td></tr>"
+    for(var i=0;i<details.length;i++)
     {
-        text += "<tr><td>"+arrEntry[i].ID+"</td><td>"+arrEntry[i].Name+"</td><td>"
-        +arrEntry[i].TotalSalary+"</td></tr>";   
+        text += "<tr><td>"+details[i].ID+"</td><td>"+details[i].Name+"</td><td>"
+        +details[i].TotalSalary+"</td></tr>"; 
+        details[i].TotalSalary = 30000;  
     }
     text += "</table>";
-    arrEntry[0].TotalSalary = 30000;
-    document.getElementById('divTable').innerHTML=text;
+    document.getElementById('divForm').innerHTML=text;
     populate();
-    document.getElementById('idInput').value="";
-    document.getElementById('nameInput').value="";
-    document.getElementById('salInput').value="";
-}
+
 function populate()
 {
     var text = "<table><tr><td>ID</td><td>Name</td><td>Salary</td></tr>"
-for( var i=0;i<arrEntry.length;i++){
-    text += "<tr><td>"+arrEntry[i].ID+"</td><td>"+arrEntry[i].Name+"</td><td>"
-    +arrEntry[i].TotalSalary+"</td></tr>";
-}
-document.getElementById('divTable').innerHTML=text;
+    for( var i=0;i<details.length;i++)
+    {
+        text += "<tr><td>"+details[i].ID+"</td><td>"+details[i].Name+"</td><td>"
+        +details[i].TotalSalary+"</td></tr>";
+    }
+    document.getElementById('divForm').innerHTML=text;
 }
