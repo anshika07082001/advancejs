@@ -1,4 +1,5 @@
 const arrEntry =[];
+
 function addEntry()
 {
     var idInput = document.getElementById('idInput').value;
@@ -81,3 +82,37 @@ var text = "<table><tr><td><b>ID</b></td><td><b>Name</b></td><td><b>TotalSalary<
 text += "<tr><td>"+objDetails.ID+"</td><td>"+objDetails.Name+"</td><td>"+objDetails.TotalSalary+"</td></tr>"; 
 text += "</table>";
 document.getElementById('divTask4').innerHTML = text;
+
+// /////////////////////        Task5       ///////////////////////////
+
+const updArr = [{ID:1,Name:"Neha",TotalSalary:1000,UpdatedSalary:""},
+{ID:2,Name:"Raj",TotalSalary:4000,UpdatedSalary:""},
+{ID:3,Name:"harry",TotalSalary:8000,UpdatedSalary:""},
+{ID:4,Name:"john",TotalSalary:2000,UpdatedSalary:""}]
+function populateUpd()
+{
+    var text = "<table><tr><td><b>ID</b></td><td><b>Name</b></td><td><b>TotalSalary</b></td><td><b>UpdatedSalary</b></td></tr>"
+    for(i=0;i<updArr.length;i++)
+    {
+        text += "<tr><td>"+updArr[i].ID+"</td><td>"+updArr[i].Name+"</td><td>"+updArr[i].TotalSalary+"</td><td>"+updArr[i].UpdatedSalary+"</td></tr>";
+    }
+    text+="</table>";
+    document.getElementById('divTask5').innerHTML=text;
+}
+updatedArr();
+function updatedArr()
+{
+    try
+    {
+        for(i=0;i<updArr.length;i++)
+        {
+            UpdatedSalary = updArr[i].TotalSalary*1.10;
+            updArr[i].UpdatedSalary=UpdatedSalary;
+        }
+        populateUpd();
+    }
+    catch(e)
+    {
+        alert();
+    }
+}
