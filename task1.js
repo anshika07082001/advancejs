@@ -116,3 +116,24 @@ function updatedArr()
         alert();
     }
 }
+// ///////////////////////      Task 6    //////////////////////
+
+const updArray = [{ID:1,Name:"Neha",TotalSalary:1000,salary15:""},
+{ID:2,Name:"Raj",TotalSalary:4000,salary15:""}]
+function populateUpdate()
+{
+    var text = "<table><tr><td><b>ID</b></td><td><b>Name</b></td><td><b>TotalSalary</b></td><td><b>salary15</b></td></tr>"
+    for(i=0;i<updArray.length;i++)
+    {
+        text += "<tr><td>"+updArray[i].ID+"</td><td>"+updArray[i].Name+"</td><td>"+updArray[i].TotalSalary+"</td><td>"+updArray[i].salary15+"</td></tr>";
+    }
+    text+="</table>";
+    document.getElementById('divTask6').innerHTML=text;
+}
+updateSalary();
+function updateSalary(){
+
+    updArray.map((x)=>x.salary15=x.TotalSalary*0.15);
+
+    populateUpdate();
+}
