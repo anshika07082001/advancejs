@@ -1,0 +1,13 @@
+#divForm{
+    height: 100px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5%;
+}
+#divForm input{
+    height: 50%;
+    width: 60%;
+    margin: 2%;
+}
